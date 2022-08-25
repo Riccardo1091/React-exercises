@@ -5,8 +5,8 @@ import { Age } from "./age";
 export class Welcome extends React.Component {
     render() {
         return (
-            <>                                  {/*props04*/}   
-                {this.props.name && <p>Welcome, <strong>{this.props.name}!</strong></p>}
+            <>                                     
+                {this.props.name && <p>Welcome, {this.props.name}!</p>}
                 {!this.props.name && <p>Welcome, stranger!</p>}
 
                 {/*props03*/}
