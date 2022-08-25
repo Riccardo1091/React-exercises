@@ -15,8 +15,8 @@ export class App extends React.Component {
             {/* components09 - Abbiamo un duplicato del componente Messaggio all'interno del componente Hello*/}
             <Message/>
             {/*<Welcome/>*/}
-            {/* props02 */}
-            <Welcome name="John" age={16}/>
+            {/* props02 */} {/* props04 */}
+            <Welcome name={<strong>John</strong>} age={16}/>
             {/* props03 */}
             <Counter initialValue={5} increment={5} interval={1000}/>
             </>
