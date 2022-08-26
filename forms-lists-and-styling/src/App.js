@@ -6,7 +6,7 @@ export class App extends React.Component {
         return (
             <>
                 <h1>Colors list 2</h1>
-                <Colors items={["red","cyan","blue","yellow"]}/>
+                <Colors items={[{id:1, name:"red"}, {id:2, name:"cyab"}, {id:3, name:"blue"}, {id:4, name:"yellow"}]}/>
             </>
         )    
     } 
