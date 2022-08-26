@@ -1,11 +1,12 @@
 import React from 'react'
-import UncontrolledLogin from './uncontrolledLogin'
+import { Colors } from './colors'
 
 export class App extends React.Component {
     render() {
         return (
             <>
-                <UncontrolledLogin/>
+                <h1>Colors list 2</h1>
+                <Colors items={["red","cyan","blue","yellow"]}/>
             </>
         )    
     } 
