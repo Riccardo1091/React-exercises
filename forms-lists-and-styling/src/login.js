@@ -39,7 +39,7 @@ export class Login extends React.Component {
                     <label>Password</label>
                     <input type="password" name="password" value={this.state.password} onChange={this.handleInput}/><br/>
                     <label>Remember me?</label>
-                    <input type="checkbox" name="remember" value={this.state.remember} onChange={this.handleInput}/><br/><br/>
+                    <input type="checkbox" name="remember" checked={this.state.remember} onChange={this.handleInput}/><br/><br/>
                     {this.state.username && this.state.password ? <button type="submit" name="login" value={this.state.login} onClick={this.onLogin}>Login</button> : <button type="submit" name="login" disabled>Login</button>}
                     <button type="submit" name="reset" onClick={this.onReset}>Reset</button>
                 </div>
