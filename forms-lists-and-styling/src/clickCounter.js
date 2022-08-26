@@ -1,5 +1,4 @@
 import React from "react";
-import { CounterButton } from "./counterButton";
 
 export class ClickCounter extends React.Component {
 
