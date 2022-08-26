@@ -22,6 +22,10 @@ export default class UncontrolledLogin extends React.Component {
         this._formRef.current.elements.remember.checked = true
     }
 
+    componentDidMount() {
+        this._formRef.current.elements.username.focus()
+    }
+
     render() {
         return (
             <div className="login">
@@ -30,6 +34,7 @@ export default class UncontrolledLogin extends React.Component {
                     <form ref={this._formRef} onSubmit={this.formSubmit}>
                         <label>Username</label>
                         <input type="text" name="username"/><br/>
+                        {/* <input type="text" name="username" autofocus/><br/> */}
                         <label>Password</label>
                         <input type="password" name="password"/><br/>
                         <label>Remember me?</label>
