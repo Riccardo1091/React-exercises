@@ -1,11 +1,11 @@
 import React from 'react'
-import { Login } from './login'
+import UncontrolledLogin from './uncontrolledLogin'
 
 export class App extends React.Component {
     render() {
         return (
             <>
-                <Login/>
+                <UncontrolledLogin/>
             </>
         )    
     } 
