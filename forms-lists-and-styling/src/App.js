@@ -1,11 +1,12 @@
 import React from 'react'
-import { TodoList } from './todoList'
+import { Welcome } from './welcome'
+
 
 export class App extends React.Component {
     render() {
         return (
             <>
-               <TodoList/>
+               <Welcome className="welcome" name="Gino"/>
             </>
         )    
     } 
