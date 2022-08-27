@@ -37,11 +37,18 @@ export class TodoList extends React.Component {
         this.refReset.current.value = '';
     }
 
+    handleResetList = e => {
+        this.setState({
+            items: []
+        }) 
+    }
+
     render() {
         return (
             <>     
                 <form onSubmit={this.handleAddTodo}>
                     <input name="addTodo" type="text" ref={this.refReset}/>
+                    <button type="reset" onClick={this.handleResetList}>Reset List</button>
                     <button type="submit">Add</button>
                 </form>
                 <ul className="todo-list">
