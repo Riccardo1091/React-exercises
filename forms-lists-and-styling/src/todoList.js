@@ -43,6 +43,12 @@ export class TodoList extends React.Component {
         }) 
     }
 
+    handleDeleteTodo = item => {
+        this.setState(statoPrecedente => ({
+            items: statoPrecedente.items.filter(el => el !== item)
+        }))
+    }
+       
     render() {
         return (
             <>     
@@ -52,7 +58,7 @@ export class TodoList extends React.Component {
                     <button type="submit">Add</button>
                 </form>
                 <ul className="todo-list">
-                    {this.state.items.map((item, index) => <li key={item + index}>{item}</li>)}
+                    {this.state.items.map((item, index) => <li key={item + index}>{item} <button onClick={() => this.handleDeleteTodo(item)}>Delete <strong>{item + index}</strong> element</button></li>)}
                 </ul>
             </>
         )
