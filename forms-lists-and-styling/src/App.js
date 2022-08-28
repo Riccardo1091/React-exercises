@@ -1,12 +1,13 @@
 import React from 'react'
-import { TodoList } from './todoList'
+import { Container } from './container'
+import { Message } from './message'
 
 export class App extends React.Component {
     render() {
         return (
-            <>
-               <TodoList/>
-            </>
+            <Container>
+                <Message />
+            </Container>
         )    
     } 
 }
