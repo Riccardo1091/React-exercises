@@ -5,7 +5,7 @@ import { Message } from './message'
 export class App extends React.Component {
     render() {
         return (
-            <Container>
+            <Container title="Titolo Container">
                 <Message />
             </Container>
         )    
