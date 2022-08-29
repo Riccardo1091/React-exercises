@@ -29,7 +29,7 @@ export class TodoList extends React.Component {
     }
        
     render() {
-            return this.props.render({
+            return this.props.children({
                 items: this.state.items,
                 addTodo: this.handleAddTodo,
                 resetList: this.handleResetList,
