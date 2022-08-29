@@ -8,6 +8,7 @@ export class App extends React.Component {
             <>
                 <Welcome name="Riccardo"/> 
                 <Sum numbers={[25,65,12,85]}/>
+                <Sum/>
             </>
         )    
     } 
