@@ -1,7 +1,7 @@
 import React, { createContext } from 'react'
 import { DisplayLanguage } from './displayLanguage'
 
-const LanguageContext = createContext('it')
+export const LanguageContext = createContext('it')
 
 export class App extends React.Component {
     state = {
