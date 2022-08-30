@@ -21,7 +21,7 @@ export function GithubUser({username}) {
 
     return (
         <>  
-            {!utente.login ? "No Name" : <h1>{utente.login} {`- ${utente.name}`}</h1>}
+            {!utente.login & !utente.name ? "No Name" : <h1>{utente.login} {`- ${utente.name}`}</h1>}
             {!utente.bio ? "No Bio" : <h3>Bio: {utente.bio}</h3>}
         </>
     )

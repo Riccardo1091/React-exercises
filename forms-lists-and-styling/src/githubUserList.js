@@ -14,6 +14,7 @@ export function GithubUserList({usernames}) {
     return (
         <>
             <form onSubmit={addUser}>
+                {/* Non ho trovato il modo con gli hooks di ripulire l'input dopo il submit */}
                 <input name="addUser" type="text"/>
                 <button type="submit">Add User</button>
             </form>
