@@ -1,12 +1,19 @@
-import React from 'react'
-import { ClickCounter } from './clickCounter'
+import React, { useState } from 'react'
+import { Counter } from './counter'
 
-export class App extends React.Component {
-    render() {
-        return (
-            <>
-            	<ClickCounter initialValue={5} increment={5}/>
-            </>
-        )    
-    } 
+export function App() {
+
+    const [onOff, setOnOff] = useState(true)
+
+    function onOffCounter() {
+      setOnOff(onOff => !onOff) 
+    }
+
+    return (
+        <>  
+            <button onClick={onOffCounter}>On/Off Counter</button>
+            {onOff && <Counter/>}
+            
+        </>
+    )    
 }
