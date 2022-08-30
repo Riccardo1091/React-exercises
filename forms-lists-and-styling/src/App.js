@@ -1,19 +1,10 @@
-import React, { useState } from 'react'
-import { Counter } from './counter'
+import React from 'react'
+import { GithubUser } from './githubUser'
 
 export function App() {
-
-    const [onOff, setOnOff] = useState(true)
-
-    function onOffCounter() {
-      setOnOff(onOff => !onOff) 
-    }
-
     return (
         <>  
-            <button onClick={onOffCounter}>On/Off Counter</button>
-            {onOff && <Counter/>}
-            
+            <GithubUser username="riccardo1091"/>  
         </>
     )    
 }
