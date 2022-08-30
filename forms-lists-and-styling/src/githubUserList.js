@@ -10,12 +10,12 @@ export function GithubUserList({usernames}) {
                 usernames = [...prevUtenti, e.target.elements.addUser.value]
         ))
     }
-    
+
     return (
         <>
             <form onSubmit={addUser}>
                 <input name="addUser" type="text"/>
-                <button type="submit">Add</button>
+                <button type="submit">Add User</button>
             </form>
             <ul>
                 {utenti.map((username, index) => <li key={index}><GithubUser username={username}/></li>)}
