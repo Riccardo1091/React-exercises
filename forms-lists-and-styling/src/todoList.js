@@ -5,7 +5,6 @@ export function TodoList() {
 
     function handleAddTodo(e) {
         e.preventDefault();
-        console.log(e.target.elements.addTodo.value)
         setTodos(prevTodos => (
                 todos = [...prevTodos, e.target.elements.addTodo.value]
         ))
