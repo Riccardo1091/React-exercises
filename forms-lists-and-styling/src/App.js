@@ -1,10 +1,14 @@
 import React from 'react'
-import { GithubUser } from './githubUser'
+
+navigator.geolocation.getCurrentPosition((position) => {
+    // doSomething(position.coords.latitude, position.coords.longitude);
+    console.log(position)
+  });
 
 export function App() {
     return (
         <>  
-            <GithubUser username="riccardo1091"/>  
+            
         </>
     )    
 }
