@@ -1,12 +1,12 @@
 import { useForm } from "./useForm"
 
-export function FormBello() {
-    const {username, password, handle} = useForm({username:"", password:""})
+export function FormBello() {                           // Qualora avessi molti campi?
+    const {username, password, handleChange} = useForm({username:"", password:""})
 
     return (
         <>
-            <input type="text" onChange={handle} value={username} name="username"/>
-            <input type="password" onChange={handle} value={password} name="password"/>
+            <input type="text" onChange={handleChange} value={username} name="username"/>
+            <input type="password" onChange={handleChange} value={password} name="password"/>
         </>
     )
 }
