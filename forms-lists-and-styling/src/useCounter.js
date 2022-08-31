@@ -1,5 +1,7 @@
-export function UseCounter(valoreIniziale=0) {
-    const [valore, setValore] = UseCounter(valoreIniziale)
+import { useState } from "react"
+
+export function UseCounter(milleBolleBlu) {
+    const [valore, setValore] = useState(milleBolleBlu)
 
     function piu() {
         setValore(valore => valore + 1)
@@ -8,12 +10,9 @@ export function UseCounter(valoreIniziale=0) {
         setValore(valore => valore - 1)
     }
     function reset() {
-        setValore(valore => valoreIniziale)
+        setValore(valore => milleBolleBlu)
     }
     return {
-        valore: valore,
-        su: piu,
-        giu: meno,
-        reset: reset
+        valore, piu, meno, reset
     }
 }
