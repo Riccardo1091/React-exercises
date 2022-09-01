@@ -1,11 +1,11 @@
 import React from 'react'
-import { Login } from './login'
+import { CarDetails } from './CarDetails'
 
 export class App extends React.Component {
     render() {
         return (
             <>
-                <Login/>
+                <CarDetails initialValues={{model:"Tesla", year:"2021", color:"Blue"}}/>  
             </>
         )    
     } 
