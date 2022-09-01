@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export function Login() {
     const [form, setForm ] = useState({
@@ -26,12 +26,20 @@ export function Login() {
             login: true
         }))
     }
+
+    const focusRef = useRef()
+
+    useEffect(() => {
+      focusRef.current.focus()
+    }, [])
+    
+
     console.log(form)
     return (
         <div className="login">
             <div className="form-group">
                 <label>Username</label>
-                <input type="text" name="username" value={form.username} onChange={handleInput}/><br/>
+                <input ref={focusRef} type="text" name="username" value={form.username} onChange={handleInput}/><br/>
                 <label>Password</label>
                 <input type="password" name="password" value={form.password} onChange={handleInput}/><br/>
                 <label>Remember me?</label>
