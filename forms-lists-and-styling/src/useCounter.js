@@ -1,17 +1,20 @@
-import { useState } from "react"
+import { useCallback, useState } from "react"
 
 export function UseCounter(milleBolleBlu) {
     const [valore, setValore] = useState(milleBolleBlu)
 
-    function piu() {
+    const piu = useCallback(() => {
         setValore(valore => valore + 1)
-    }
-    function meno() {
-        setValore(valore => valore - 1)
-    }
-    function reset() {
-        setValore(valore => milleBolleBlu)
-    }
+      },[]
+    )
+    const meno = useCallback(() => {
+            setValore(valore => valore - 1)
+        },[]
+    )
+    const reset = useCallback(() => {
+        setValore(milleBolleBlu)
+    },[milleBolleBlu]
+    )
     return {
         valore, piu, meno, reset
     }
