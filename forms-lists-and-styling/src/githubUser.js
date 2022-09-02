@@ -6,15 +6,22 @@ export function GithubUser({username}) {
     useEffect(() => {
         (async () => {
             const res = await fetch(`https://api.github.com/users/${username}`)
-            const data = await res.json()
-            setUtente(data)
+            if (res.ok) {
+                if (res.status !== 404) {
+                    const data = await res.json()
+                    setUtente(data)
+                } 
+                
+            } else {
+                alert('Utente Non trovato, Riprova')
+            }   
         })();    
     }, [username]);
 
     return (
         <>  
-            {utente.login ? <h1>The username is: {utente.login}</h1> : <h1>This user doesn't exist</h1>}
-            {utente.bio ? <h3>Bio: {utente.bio}</h3> : <h3>No Bio...</h3>}
+            {!utente.login & !utente.name ? "No Name" : <h1>{utente.login} {utente.name ? `- ${utente.name}` : " "}</h1>}
+            {!utente.bio ? "No Bio" : <h3>Bio: {utente.bio}</h3>}
         </>
     )
 }

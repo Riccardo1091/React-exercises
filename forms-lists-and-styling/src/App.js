@@ -1,8 +1,9 @@
 import React from 'react'
-import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Link, Outlet, Route, Routes } from 'react-router-dom'
 import { ClickCounter } from './clickCounter'
 import { Welcome }  from './welcome'
 import { ShowGithubUser } from './showGithubUser'
+import { GithubUserList } from './githubUserList'
 
 export function App() {
     return (
@@ -25,7 +26,10 @@ export function App() {
                     />
                     <Route path='/' element={<Welcome name="Riccardo"/>} />
                     <Route path='/counter' element={<ClickCounter initialValue={5} increment={5}/>} />
-                    <Route path='users/:username' element={<ShowGithubUser/>} /> 
+                    <Route path='/users' element={<div><GithubUserList usernames={["Riccardo1091", "MAugelli", "msimile", "rickcrypto90"]}/><hr/><Outlet/></div>}>
+                        <Route path=':username' element={<ShowGithubUser/>} />
+                    </Route>
+                    {/* <Route path='/users/:username' element={<ShowGithubUser/>} />  */}
                 </Routes>
             </BrowserRouter>
         </>
