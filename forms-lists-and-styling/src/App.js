@@ -4,7 +4,7 @@ import { GithubUser } from './githubUser'
 export function App() {
     return (
         <>  
-            <GithubUser username=""/>  
+            <GithubUser username="riccardo1091"/>  
         </>
     )    
 }

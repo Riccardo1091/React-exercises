@@ -1,10 +1,12 @@
 import { UseGithubUser } from "./useGithubUser"
 
 export function GithubUser({username}) {
-    const {data, error} = UseGithubUser(username)
+    const {data, error, reFetchData} = UseGithubUser(username)
 
     return (
         <>  
+            <button onClick={reFetchData}>Re-Fetch Data</button>
+
             {error && <h3>C'è stato un errore...</h3>}
             {!data && !error && <h3>Caricamento...</h3>}
             
