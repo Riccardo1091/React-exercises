@@ -1,9 +1,13 @@
 // import {App} from './app'
 // import {createRoot} from 'react-dom/client'
 import {counterReducer} from './storeCounter/CounterReducer'
-import { legacy_createStore as createStore } from 'redux'
+import { combineReducers, legacy_createStore as createStore } from 'redux'
 
-let store = createStore(counterReducer)
+const rootReducer = combineReducers({
+    counter: counterReducer
+  })
+
+let store = createStore(rootReducer)
 store.subscribe(() => console.log(store.getState()))
 
 store.dispatch({type: 'counter/increment', by: 1})
